@@ -16,7 +16,10 @@ exports.addMenu = async (req, res) => {
         menu.itemname = req.body.itemname
         menu.itemprice = req.body.itemprice
         menu.halfprice = req.body.halfprice
-        menu.thumbnail = req.body.thumbnail
+        
+        if(req.file.filename > 0){
+            menu.thumbnail = req.file.filename
+        }
         menu.quaterprice = req.body.quaterprice
 
         menu.save()

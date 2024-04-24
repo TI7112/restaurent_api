@@ -6,7 +6,7 @@ const menuScema = new mongoose.Schema({
         ref: 'restaurent'
     },
     itemname: String,
-    itemthumbnail: String,
+    thumbnail: String,
     itemprice: String,
     halfprice: String,
     quaterprice: String,

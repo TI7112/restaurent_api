@@ -1,9 +1,9 @@
 const multer = require('multer')
 const path = require('path')
 
-const profilestorage = multer.diskStorage({
+const menuthumbnailstorage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './public/assets/uploads/profile')
+        cb(null, './public/assets/uploads/menu')
     },
     filename: function (req, file, cb) {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
@@ -31,6 +31,6 @@ const storystorage = multer.diskStorage({
     }
 })
 
-exports.profileupload = multer({ storage: profilestorage })
+exports.thumbnailupload = multer({ storage: menuthumbnailstorage })
 exports.postupload = multer({ storage: poststorage })
 exports.storyupload = multer({ storage: storystorage })

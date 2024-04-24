@@ -5,7 +5,7 @@ const router = express.Router();
 
 // *********************************post route****************************************
 
-router.post('/add', addRestaurent)
+router.post('/add' , addRestaurent)
 router.get('/get', getRestaurents)
 router.post('/get-by-id', getRestaurentById)
 router.post('/delete', deleteRestaurent)
