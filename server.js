@@ -18,7 +18,9 @@ const app = express();
 connectMongoose()
 
 app.use(flash());
-app.use(cors());
+app.use(cors({
+    origin:'//192.168.1.5'
+}));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -37,6 +39,6 @@ app.use('/res', resRouter);
 app.use('/menu', menuRouter);
 
 
-app.listen(8000);
+app.listen(5000);
 
 module.exports = app;
